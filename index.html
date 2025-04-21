@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Planificador de Ahorro Visual</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div id="terminal">
+    <h1>> Planificador de Ahorro Visual</h1>
+    <div id="popup">
+      <label>Monto objetivo ($UYU): <input type="number" id="objetivo" /></label><br>
+      <label>Tiempo disponible: 
+        <input type="number" id="tiempo" />
+        <select id="unidad">
+          <option value="dias">Días</option>
+          <option value="meses">Meses</option>
+          <option value="años">Años</option>
+        </select>
+      </label><br>
+      <label>Dinero ya ahorrado ($UYU): <input type="number" id="ahorrado" value="0" /></label><br>
+      <label>Banco:
+        <select id="banco">
+          <option value="itau">Itaú (8%)</option>
+          <option value="bbva">BBVA (7%)</option>
+          <option value="brou">BROU (6.5%)</option>
+        </select>
+      </label><br>
+      <label><input type="checkbox" id="compuesto" /> Usar interés compuesto</label><br><br>
+      <button onclick="calcularTodo()">Calcular Todo</button>
+    </div>
+
+    <pre id="resultado"></pre>
+    <canvas id="grafico"></canvas>
+
+    <footer>
+      <p>Cotización BROU actual: <span id="dolar">Cargando...</span> UYU/USD</p>
+      <a href="https://ko-fi.com/tuusuario" target="_blank">💸 Apoyá este proyecto en Ko-fi</a>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
